@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
 
   constructor(private rs : RestService){}
 
-  columns = ["User Id", "First Name", "Last Name", "Email", "Mobile", "Salary"];
+  columns = ["User Id", "employee_name", "employee_salary", "employee_age", "profile_image"];
 
-  index = ["id", "firstName", "lastName", "email", "mobile", "salary"];
+  index = ["id", "employee_name", "employee_salary", "employee_age", "profile_image"];
 
   users : Users[] = [];
 
