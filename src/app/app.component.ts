@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
 
   users : Users[] = [];
 
+
   ngOnInit(): void {
     this.rs.getUsers().subscribe
     (
