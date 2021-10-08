@@ -14,5 +14,8 @@
       {{user[col]}}
     </td>
   </tr>
+  <div *ngFor="let d of showpost paginate : {itemsPerPage :10, currentPage: page, totalItems:totalLength}">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
 
 </table>
