@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
   title = 'JSONServerAPI';
 
   constructor(private rs : RestService){}
+  
+  totalLength:any;
+  page:number = 1;
 
   columns = ["User Id", "employee_name", "employee_salary", "employee_age", "profile_image"];
 
@@ -25,6 +28,7 @@ export class AppComponent implements OnInit {
       (response)=>
       {
         this.users = response;
+        this.totalLength = result.length;
       },
 
       (error)=>
